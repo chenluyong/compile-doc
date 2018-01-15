@@ -6,6 +6,7 @@
 
 ```
 # 运行容器
+# bitcoin: 可以填写容器名或者容器ID
 docker exec -it bitcoin /bin/bash
 ```
 
