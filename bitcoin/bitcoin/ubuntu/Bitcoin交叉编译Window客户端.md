@@ -9,7 +9,7 @@
 sudo docker ps -a
 # 运行容器(CONTAINER)
 # bitcoin: 可以填写容器名或者容器ID
-sudo docker exec -it bitcoin /bin/bash1
+sudo docker exec -it bitcoin /bin/bash
 ```
 
 ## 基础环境配置
