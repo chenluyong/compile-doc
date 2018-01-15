@@ -27,7 +27,7 @@ mkdir -p bitcoin/bitcoin/win
 cd bitcoin/bitcoin/win
 ```
 
-克隆bitcoin项目
+克隆Bitcoin项目
 
 ```
 # 克隆最新版 bitcoin 项目
