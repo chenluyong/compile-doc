@@ -4,7 +4,10 @@
 
 ## 启动Docker
 
-
+```
+# 运行容器
+docker exec -it bitcoin /bin/bash
+```
 
 ## 基础环境配置
 
@@ -17,22 +20,19 @@ apt-get update
 apt-get install git
 ```
 
+初始化目录
+
+```
+mkdir -p bitcoin/bitcoin/win
+cd bitcoin/bitcoin/win
+```
+
 克隆bitcoin项目
 
 ```
 # 克隆最新版 bitcoin 项目
 git clone https://github.com/bitcoin/bitcoin.git
 ```
-
- 
-
-
-
-
-
-
-
-  \`\`\`
 
 
 
