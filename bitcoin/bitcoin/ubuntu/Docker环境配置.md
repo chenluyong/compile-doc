@@ -85,7 +85,7 @@ sudo docker run -it --name bitcoin -v /home/cly/Desktop/dockerbtc:/cloud/btc ubu
 docker exec -it bitcoin /bin/bash
 ```
 
-备用镜像选择下载
+备用镜像下载
 
 ```
 链接：https://pan.baidu.com/s/1htC453u 密码：ae78
