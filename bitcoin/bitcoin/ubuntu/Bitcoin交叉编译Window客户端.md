@@ -1,4 +1,4 @@
-# Bitcoin 交叉编译
+# Bitcoin 交叉编译Window客户端
 
 （注：阅读该篇文章前，务必配置好Bitcoin基础环境）
 
