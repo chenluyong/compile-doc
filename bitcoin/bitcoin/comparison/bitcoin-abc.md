@@ -97,8 +97,6 @@ nHashType 是比特币现金的主要修改点
 
 
 
-.
-
 ```
 // 如果是分叉前的币 && 这次属于分叉币交易类型
 if (sigHashType.hasForkId() && (flags & SCRIPT_ENABLE_SIGHASH_FORKID)) {
