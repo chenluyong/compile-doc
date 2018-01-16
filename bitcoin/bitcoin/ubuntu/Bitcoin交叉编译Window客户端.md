@@ -41,8 +41,6 @@ git clone https://github.com/bitcoin/bitcoin.git
 cd bitcoin
 ```
 
-
-
 ## 基础依赖库配置
 
 安装 32-bit MinGw 跨平台构建程序

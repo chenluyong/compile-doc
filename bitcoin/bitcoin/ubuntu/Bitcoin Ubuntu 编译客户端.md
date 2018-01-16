@@ -23,6 +23,8 @@ sudo docker exec -it bitcoin /bin/bash
 apt-get update
 # 下载 gitV
 apt-get install git
+# 安装 autogen
+apt-get install autogen
 ```
 
 初始化目录
