@@ -27,7 +27,7 @@ int main(int argc, char* argv[]) {
     goodjob(argv[0],argv[1],argv[2],argv[3],argv[4]);
     std::cout << "bepal sign end..." << std::endl;
     return 0;
-    }
+}
 ```
 
     #include <stdio.h>
