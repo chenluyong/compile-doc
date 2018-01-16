@@ -74,9 +74,7 @@ apt-get install libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev qttools5-dev-to
 apt-get install libqrencode-dev
 ```
 
-
-
-# 编译客户端
+## 编译客户端
 
 ```
 # 生成安装脚本
