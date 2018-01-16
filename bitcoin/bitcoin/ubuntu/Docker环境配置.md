@@ -93,3 +93,9 @@ docker exec -it bitcoin /bin/bash
 
 
 
+为了保障环境统一，构建顺利，我们推荐使用 Docker 进行配置。
+
+Docker 的扩展使用可以自行查阅资料。
+
+
+

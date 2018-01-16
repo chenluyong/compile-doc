@@ -16,7 +16,7 @@ sudo docker exec -it bitcoin /bin/bash
 
 ## 基础环境配置
 
-安装 Git
+安装 基础环境
 
 ```
 # 更新云信息
@@ -25,6 +25,9 @@ apt-get update
 apt-get install git
 # 安装 autogen
 apt-get install autoconf
+# 安装编译环境
+apt-get install gcc
+apt-get install g++
 ```
 
 初始化目录
@@ -45,13 +48,21 @@ cd bitcoin
 
 ## 基础依赖库配置
 
-安装 32-bit MinGw 跨平台构建程序
-
-MinGw 是跨平台的编译器, 我们这里欲生成 32 bit 的 bitcoin 客户端, 故我们选择了 i686 版本
+```
+apt-get install software-properties-common
+add-apt-repository ppa:bitcoin/bitcoin
+apt-get update
+apt-get install libdb4.8-dev libdb4.8++-dev
+```
 
 ```
-apt install g++-mingw-w64-i686 mingw-w64-i686-dev
+# 程序所需的 boost 库安装包
+apt-get install libboost-system-dev libboost-filesystem-dev libboost-chrono-dev libboost-program-options-dev libboost-test-dev libboost-thread-dev
+# 若执行不顺利可以安装整个 Boost 库
+apt-get install libboost-all-dev
 ```
+
+
 
 
 
