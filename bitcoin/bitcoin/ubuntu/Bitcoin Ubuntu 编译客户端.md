@@ -24,7 +24,7 @@ apt-get update
 # 下载 gitV
 apt-get install git
 # 安装 autogen
-apt-get install autogen
+apt-get install autoconf
 ```
 
 初始化目录

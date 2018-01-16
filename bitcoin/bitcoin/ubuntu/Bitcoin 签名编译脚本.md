@@ -1,4 +1,4 @@
-# Bitcoin0.16 签名编译脚本 
+# Bitcoin0.16 签名编译脚本
 
 ```
 hack.o: hack.cpp
