@@ -53,6 +53,8 @@ apt-get install software-properties-common
 add-apt-repository ppa:bitcoin/bitcoin
 apt-get update
 apt-get install libdb4.8-dev libdb4.8++-dev
+apt-get install libminiupnpc-dev
+apt-get install libzmq3-dev
 ```
 
 ```
@@ -61,6 +63,17 @@ apt-get install libboost-system-dev libboost-filesystem-dev libboost-chrono-dev 
 # 若执行不顺利可以安装整个 Boost 库
 apt-get install libboost-all-dev
 ```
+
+若需要Qt界面可以安装以下库
+
+```
+# Qt 5 基础库
+apt-get install libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev qttools5-dev-tools libprotobuf-dev protobuf-compiler
+# Qt 二维码扩展库
+apt-get install libqrencode-dev
+```
+
+
 
 
 
