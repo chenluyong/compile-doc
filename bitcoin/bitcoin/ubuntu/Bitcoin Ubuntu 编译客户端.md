@@ -21,7 +21,7 @@ sudo docker exec -it bitcoin /bin/bash
 ```
 # 更新云信息
 apt-get update
-# 下载 gitV
+# 下载 git
 apt-get install git
 # 安装 autogen
 apt-get install autoconf
@@ -49,6 +49,7 @@ cd bitcoin
 ## 基础依赖库配置
 
 ```
+apt-get install build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils python3
 apt-get install software-properties-common
 add-apt-repository ppa:bitcoin/bitcoin
 apt-get update
@@ -75,7 +76,16 @@ apt-get install libqrencode-dev
 
 
 
+# 编译客户端
 
+```
+# 生成安装脚本
+./autogen.sh
+# 安装检测环境
+./configure
+# 构建项目
+make
+```
 
 
 
