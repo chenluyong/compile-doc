@@ -4,17 +4,17 @@
 
 # 签名部分差别
 
-比特币默认选择 SIGVERSION\_BASE  作为参数
+比特币默认选择 SIGVERSION\_BASE = 0 作为参数
 
 ```
-enum SigVersion
+enum SigVersion  // 该参数决定了签名的方式
 {
     SIGVERSION_BASE = 0,      // 默认签名方式
     SIGVERSION_WITNESS_V0 = 1,// 隔离验证签名
 };
 ```
 
-该参数决定了签名的方式
+
 
 比特币 0.16 源码
 
@@ -38,7 +38,8 @@ uint256 SignatureHash(const CScript& scriptCode, const CTransaction& txTo,
             hashPrevouts = cacheready ? cache->hashPrevouts : GetPrevoutHash(txTo);
         }
 
-        if (!(nHashType & SIGHASH_ANYONECANPAY) && (nHashType & 0x1f) != SIGHASH_SINGLE && (nHashType & 0x1f) != SIGHASH_NONE) {
+        if (!(nHashType & SIGHASH_ANYONECANPAY) && (nHashType & 0x1f) != SIGHASH_SINGLE &&
+             (nHashType & 0x1f) != SIGHASH_NONE) {
             hashSequence = cacheready ? cache->hashSequence : GetSequenceHash(txTo);
         }
 
@@ -93,6 +94,8 @@ uint256 SignatureHash(const CScript& scriptCode, const CTransaction& txTo,
     return ss.GetHash();
 }
 ```
+
+nHashType 是比特币现金的主要修改点
 
 
 
@@ -153,6 +156,4 @@ if (sigHashType.hasForkId() && (flags & SCRIPT_ENABLE_SIGHASH_FORKID)) {
 ```
 
 代码解析
-
-
 
