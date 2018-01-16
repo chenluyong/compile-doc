@@ -16,11 +16,7 @@ ProduceSignature(MutableTransactionSignatureCreator(
 
 参数 3：签名数据 （ out ）
 
-
-
 ### ProduceSignature 函数内部
-
-
 
 制作签名前缀数据
 
@@ -38,12 +34,6 @@ SignStep(creator, script, result, whichType, SIGVERSION_BASE);
 
 参数 5：签名方式 SIGVERSION\_BASE （固定参数：SIGVERSION\_BASE）
 
-
-
-
-
-
-
 ### SignSetp 函数内部
 
 解析参数
@@ -58,15 +48,11 @@ Solver(scriptPubKey, whichTypeRet, vSolutions)
 
 参数 3：函数的返回值 （ out ）
 
-
-
-
-
 ### Solver 函数内部
 
-1. 设置参数模版
+1.设置参数模版
 
- 模版排序顺序：公钥、公钥哈希、多重签名
+模版排序顺序：公钥、公钥哈希、多重签名
 
 ```
 static std::multimap<txnouttype, CScript> mTemplates;
@@ -85,7 +71,7 @@ if (mTemplates.empty())
 }
 ```
 
-2. 截取公钥 20 字节
+2.截取公钥 20 字节
 
 ```
 if (scriptPubKey.IsPayToScriptHash())
@@ -97,7 +83,7 @@ if (scriptPubKey.IsPayToScriptHash())
 }
 ```
 
-3. 隔离验证
+3.隔离验证
 
 ```
 int witnessversion;
@@ -122,12 +108,6 @@ if (scriptPubKey.IsWitnessProgram(witnessversion, witnessprogram)) {
     return false;
 }
 ```
-
-
-
-
-
-
 
 
 
