@@ -14,7 +14,7 @@ enum SigVersion  // 该参数决定了签名的方式
 };
 ```
 
-比特币 0.16 源码
+比特币 0.16 源码1
 
 bitcoin\src\script\interpreter.cpp
 
@@ -94,8 +94,6 @@ uint256 SignatureHash(const CScript& scriptCode, const CTransaction& txTo,
 ```
 
 nHashType 是比特币现金的主要修改点
-
-
 
 ```
 // 如果是分叉前的币 && 这次属于分叉币交易类型
