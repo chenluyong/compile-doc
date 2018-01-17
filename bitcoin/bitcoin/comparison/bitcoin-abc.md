@@ -93,7 +93,15 @@ uint256 SignatureHash(const CScript& scriptCode, const CTransaction& txTo,
 }
 ```
 
-nHashType 是比特币现金的主要修改点
+比特币的 nHashType 是比特币现金的主要修改点
+
+修改为 sigHashType，可以通过他来判断此次交易
+
+sigHashType 二进制第17位是标志位，用来确定他是不是分叉前的币.
+
+即 sigHashType & 0x10 为真时，则为分叉币.
+
+当为分叉币的时候，比特币现金修改了哈希的数据格式
 
 ```
 // 如果是分叉前的币 && 这次属于分叉币交易类型
