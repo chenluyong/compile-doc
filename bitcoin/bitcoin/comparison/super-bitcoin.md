@@ -51,9 +51,11 @@ uint256 SignatureHash(const CScript& scriptCode, const CTransaction& txTo, unsig
         // Sighash type
         ss << nHashType;
 
+    // 超级比特币签名修改点 Begin
         if (nHashType & SIGHASH_SBTC_FORK) {
             ss << std::string("sbtc");
         }
+    // 超级比特币签名修改点 End
 
         return ss.GetHash();
     }
@@ -78,15 +80,15 @@ uint256 SignatureHash(const CScript& scriptCode, const CTransaction& txTo, unsig
     // Serialize and hash
     CHashWriter ss(SER_GETHASH, 0);
     ss << txTmp << nHashType;
+    // 超级比特币签名修改点 Begin
     if (nHashType & SIGHASH_SBTC_FORK) {
         ss << std::string("sbtc");
     }
+    // 超级比特币签名修改点 End
 
     return ss.GetHash();
 }
 ```
-
-
 
 超级比特币在签名的末尾加入了分叉币判断，若为分叉币则在末尾加入 "sbtc" 标识
 
