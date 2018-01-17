@@ -166,3 +166,17 @@ if (sigHashType.hasForkId() && (flags & SCRIPT_ENABLE_SIGHASH_FORKID)) {
 
 然后将其中数据进行 MD5 哈希并返回。
 
+
+
+
+
+
+
+## 其它差别
+
+在签名部分 bitcoin-abc 不支持隔离验证，而bitcoin支持隔离验证。
+
+
+
+
+
