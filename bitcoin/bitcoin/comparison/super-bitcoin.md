@@ -51,11 +51,11 @@ uint256 SignatureHash(const CScript& scriptCode, const CTransaction& txTo, unsig
         // Sighash type
         ss << nHashType;
 
-    // 超级比特币签名修改点 Begin
+        // 超级比特币签名修改点 Begin
         if (nHashType & SIGHASH_SBTC_FORK) {
             ss << std::string("sbtc");
         }
-    // 超级比特币签名修改点 End
+        // 超级比特币签名修改点 End
 
         return ss.GetHash();
     }
