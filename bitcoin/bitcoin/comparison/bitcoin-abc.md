@@ -14,7 +14,7 @@ enum SigVersion  // 该参数决定了签名的方式
 };
 ```
 
-比特币 0.16 源码1
+比特币 0.16 源码
 
 bitcoin\src\script\interpreter.cpp
 
