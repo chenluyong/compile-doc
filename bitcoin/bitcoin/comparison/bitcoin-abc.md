@@ -160,8 +160,8 @@ if (sigHashType.hasForkId() && (flags & SCRIPT_ENABLE_SIGHASH_FORKID)) {
 通过代码解析数据格式
 
 ```
-字节流 << 交易版本信息 << 上一笔交易哈希 << ???  << vin 的上一笔交易
-      << 公钥脚本 << 金额 << vin 的交易哈希 << ??? << 交易时间 << 签名类型
+字节流 << 交易版本信息 << 上一笔交易哈希 << hashSequence  << vin 的上一笔交易
+      << 公钥脚本 << 金额 << vin 的hashSequence哈希 << 输出的哈希 << 交易时间 << 签名类型（重点部分）
 ```
 
 
