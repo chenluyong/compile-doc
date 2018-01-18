@@ -93,10 +93,6 @@ uint256 SignatureHash(const CScript& scriptCode, const CTransaction& txTo,
 }
 ```
 
-
-
-
-
 分叉币处理代码如下：
 
 ```
@@ -150,6 +146,8 @@ if (sigHashType.hasForkId() && (flags & SCRIPT_ENABLE_SIGHASH_FORKID)) {
     return ss.GetHash();
 }
 ```
+
+比特币现金不支持`隔离验证`
 
 比特币现金对分叉币的处理方法与比特币 `隔离验证` 处理方法极其相似
 
